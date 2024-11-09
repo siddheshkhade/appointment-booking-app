@@ -1,0 +1,411 @@
+/* Universal styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://img.freepik.com/free-vector/appointment-booking-landing-page_23-2148559996.jpg?t=st=1731173648~exp=1731177248~hmac=205cf4291da862352b801e04138d9636320a91bb9297964e767f2ccfdf01022b&w=996') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* Container for the application */
+.app-container {
+  max-width: 600px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Common form elements */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Button styling */
+input[type="submit"],
+button {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+input[type="submit"]:active,
+button:active {
+  transform: translateY(2px);
+}
+
+/* Login form styles */
+.login-form h2,
+.appointment-form h2 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+}
+
+.tabs button.active {
+  background-color: #4a90e2;
+}
+
+.tabs button:not(.active) {
+  background-color: #0d8b1e;
+}
+
+.tabs button:not(.active):hover {
+  background-color: #999;
+}
+
+/* Table styles */
+/* Clean Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: 600;
+}
+
+td {
+  color: #555;
+}
+
+/* Alternating row colors */
+tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Hover effect for rows */
+tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Table borders */
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+/* Add subtle box-shadow to the table for depth */
+table {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Responsive: Make sure the table is scrollable on small screens */
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 14px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
+
+/* Button style for approval/rejection */
+button.approve {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.reject {
+  background-color: #f44336;
+  color: white;
+}
+
+button.approve:hover {
+  background-color: #45a049;
+}
+
+button.reject:hover {
+  background-color: #e53935;
+}
+/* Universal styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('https://img.freepik.com/free-vector/appointment-booking-landing-page_23-2148560142.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+}
+
+/* Container for the application */
+.login-form {
+  max-width: 400px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Heading */
+.login-form h2 {
+  color: #4a90e2;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 12px;
+  transition: border-color 0.3s ease;
+}
+
+/* Placeholder styling */
+input::placeholder,
+select::placeholder {
+  color: #aaa;
+}
+
+/* Focus effect */
+input:focus,
+select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+/* Responsiveness for small screens */
+@media screen and (max-width: 600px) {
+  .login-form {
+    width: 90%;
+    padding: 30px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.login-form {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Subtle box shadow effect for the login form */
+.login-form {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styles for select dropdown */
+select {
+  appearance: none;
+  background: url('https://img.icons8.com/ios/452/expand-arrow.png') no-repeat right 10px center;
+  background-size: 15px;
+  padding-right: 30px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+  .app-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .tabs button {
+    font-size: 14px;
+  }
+
+  input[type="submit"],
+  button {
+    width: 100%;
+  }
+}
+
+/* Enhanced Input focus effects */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.app-container {
+  animation: fadeIn 1s ease-in;
+}
+
+/* Additional alignment for patient tab inputs and buttons */
+.patients-tab .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.patients-tab input[type="text"],
+.patients-tab input[type="date"],
+.patients-tab select,
+.patients-tab textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.patients-tab .tabs {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.patients-tab .tabs button {
+  font-size: 16px;
+  padding: 14px;
+}
+
+.patients-tab .appointment-form button {
+  width: 100%;
+  font-size: 18px;
+  padding: 15px;
+}
+
